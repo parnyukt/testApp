@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    style="@style/Activity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finding inbox SMS with content 'apptest.com/i?id=' \n Make sure you have such inbox sms."/>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_below="@+id/title"
+        android:onClick="onStartClick"
+        style="@style/AppButton"/>
+
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startBtn"
+        android:layout_above="@+id/logsView"
+        android:text="Server requests:"/>
+
+    <ScrollView
+        android:id="@+id/logsView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/logsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:text="Logs"/>
+
+    </ScrollView>
+
+</RelativeLayout>
